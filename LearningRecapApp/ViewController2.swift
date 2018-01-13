@@ -10,15 +10,15 @@ import UIKit
 
 class ViewController2: UIViewController {
 
-    @IBOutlet weak var lblSegue: UILabel!
-    
+    // OUTlets
+    @IBOutlet weak var lblSegue: UILabel!    
     @IBOutlet weak var lblSegue2: UILabel!
-    
     @IBOutlet weak var btnSegue: UIButton!
     
-
+    @IBOutlet weak var lblLazy: UILabel!
     
     
+    //Action btnSegue
     @IBAction func btnSegue(_ sender: UIButton) {
         
         performSegue(withIdentifier: "ViewController", sender: btnSegue)

@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71472A9B2008F38200A23091 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71472A9A2008F38200A23091 /* TableViewController.swift */; };
+		71472A9D2008F94A00A23091 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71472A9C2008F94A00A23091 /* CollectionViewController.swift */; };
 		714FC5302007BE0500DB8E30 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714FC52F2007BE0500DB8E30 /* ViewController2.swift */; };
+		719A0769200911D20064E4E4 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719A0768200911D20064E4E4 /* CollectionViewCell.swift */; };
 		71AC27C320077BFA00885EB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AC27C220077BFA00885EB1 /* AppDelegate.swift */; };
 		71AC27C520077BFA00885EB1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AC27C420077BFA00885EB1 /* ViewController.swift */; };
 		71AC27C820077BFA00885EB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71AC27C620077BFA00885EB1 /* Main.storyboard */; };
@@ -35,7 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		71472A9A2008F38200A23091 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		71472A9C2008F94A00A23091 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		714FC52F2007BE0500DB8E30 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		719A0768200911D20064E4E4 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		71AC27BF20077BFA00885EB1 /* LearningRecapApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningRecapApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71AC27C220077BFA00885EB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71AC27C420077BFA00885EB1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,7 +107,10 @@
 			children = (
 				71AC27C220077BFA00885EB1 /* AppDelegate.swift */,
 				71AC27C420077BFA00885EB1 /* ViewController.swift */,
+				71472A9A2008F38200A23091 /* TableViewController.swift */,
 				71AC27C620077BFA00885EB1 /* Main.storyboard */,
+				719A0768200911D20064E4E4 /* CollectionViewCell.swift */,
+				71472A9C2008F94A00A23091 /* CollectionViewController.swift */,
 				714FC52F2007BE0500DB8E30 /* ViewController2.swift */,
 				71AC27C920077BFA00885EB1 /* Assets.xcassets */,
 				71AC27CB20077BFA00885EB1 /* LaunchScreen.storyboard */,
@@ -264,7 +273,10 @@
 			files = (
 				71AC27C520077BFA00885EB1 /* ViewController.swift in Sources */,
 				71AC27C320077BFA00885EB1 /* AppDelegate.swift in Sources */,
+				719A0769200911D20064E4E4 /* CollectionViewCell.swift in Sources */,
 				714FC5302007BE0500DB8E30 /* ViewController2.swift in Sources */,
+				71472A9B2008F38200A23091 /* TableViewController.swift in Sources */,
+				71472A9D2008F94A00A23091 /* CollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
