@@ -21,7 +21,8 @@ class ViewController2: UIViewController {
     //Action btnSegue
     @IBAction func btnSegue(_ sender: UIButton) {
         
-        performSegue(withIdentifier: "ViewController", sender: btnSegue)
+        //segue spostato alla TabBar se no essa scompare
+        performSegue(withIdentifier: "back", sender: btnSegue)
     }
     override func viewDidLoad() {
         super.viewDidLoad()

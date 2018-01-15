@@ -4,15 +4,13 @@
 //
 //  Created by Vincenzo Pugliese on 12/01/2018.
 //  Copyright © 2018 Vincenzo Pugliese. All rights reserved.
-//
 
 import UIKit
 
 class TableViewController: UITableViewController {
 
     var studentMasterClass: [String] = ["VINCENZO PUGLIESE",  //Array of strings
-                                        "NELLY RATHI",
-                                        "GIANLUIGI MARRA",
+                                        "GIANLUIGI MARRA",   //IT'S EASIER than dictionary
                                         "STEFANO POMA",
                                         "LUCA TARASCO",
                                         "MADDALENA GRANATA",
@@ -33,11 +31,9 @@ class TableViewController: UITableViewController {
                                         "HIEDA ADRIANA",
                                         "MARCELO SOTOMAYOR",
                                         "GIOVANNI MONACO"]
-    
-    
+  
     @IBOutlet weak var imageViewTable: UIImageView!
-    
-    
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -46,9 +42,7 @@ class TableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        
-        
-        
+    
     }
 
     override func didReceiveMemoryWarning() {

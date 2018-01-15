@@ -1,19 +1,16 @@
-//
+
 //  ViewController.swift
 //  LearningRecapApp
 //
 //  Created by Vincenzo Pugliese on 11/01/2018.
 //  Copyright © 2018 Vincenzo Pugliese. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
     
     var contatoreVocali: Int! //count vocals and consonants
     var contatoreConsonanti: Int!
-    
-    
+
     //Outlets
     @IBOutlet weak var ImageViewGeneral: UIImageView!
     @IBOutlet weak var textBox1: UITextField!
@@ -53,12 +50,6 @@ class ViewController: UIViewController {
     @IBAction func btnRed(_ sender: UIButton) {
         self.view.backgroundColor = UIColor.red
     }
-
-
-    
-    
-    
-    @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBAction func btnGreen(_ sender: UIButton) {
         self.view.backgroundColor = UIColor.green
        }
@@ -100,19 +91,20 @@ class ViewController: UIViewController {
 
              }
         }
-//SWITHC Action per nascondere o meno la tastiera
+//SWITHC Action per nascondere
+    //aCtion UiSlider
+    
     @IBAction func switchHide(_ sender: UISwitch) {
-      
-        if self.view.endEditing(false){
-             self.view.endEditing(true)
-        }
-
+        
     }
     
-    //aCtion UiSlider
     @IBAction func slider(_ sender: UISlider) {
      lblSlider.text = String(slider.value)
         
+    }
+    
+    @IBAction func txtVocali(_ sender: UITextField) {
+        self.txtVocali.becomeFirstResponder()
     }
     
     //STepper action
@@ -123,14 +115,10 @@ class ViewController: UIViewController {
     }
     
 //action conta vocali
-    @IBAction func txtVocali(_ sender: UITextField) {
- 
-      }
-    
-    
+
     @IBAction func btnVocali(_ sender: UIButton) {
         var textToCount : String
-        var lettera : Int
+        var _ : Int
 
         textToCount = txtVocali.text!
 
@@ -138,7 +126,7 @@ class ViewController: UIViewController {
         contatoreVocali = 0
         contatoreConsonanti = 0
         
-        for (lettera, char) in textToCount.characters.enumerated() {
+        for (_, char) in textToCount.characters.enumerated() {
             
         switch char {
        
@@ -162,45 +150,32 @@ class ViewController: UIViewController {
         
         lblVocali.text = lblVocali.text! + " \(contatoreVocali!)"
         lblConsonanti.text = lblConsonanti.text! + " \(contatoreConsonanti!)"
-                                                    }
+}
     override func viewDidLoad() {
         super.viewDidLoad()
+        let defaults = UserDefaults.standard
+        self.view.backgroundColor = defaults.object(forKey: "Color") as? UIColor
         // Do any additional setup after loading the view, typically from a nib.
         btnSwap.layer.borderWidth = 2
         btnSwap.layer.borderColor = UIColor.black.cgColor
-     
-        self.textBox3.delegate = self as? UITextViewDelegate
-       
+        self.txtVocali.delegate = self as? UITextFieldDelegate
+        
+        self.textBox3.delegate  = self as? UITextViewDelegate
+
+    
     }
-
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-  
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        // Chamamos a view para forçar que a edição pare
-        self.view.endEditing(true)
+    //when we tap outside the keyboard it hides
+     func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        self.txtVocali.resignFirstResponder()
+        self.textBox3.resignFirstResponder()
     }
-  
-    // Método chamado quando o usuário aperta RETURN no teclado
-    func textFieldShouldReturn(textBox3: UITextField) -> Bool {
-        // Agora fazemos o text field deixar de ser o first responder
-        // Isso faz com que o teclado se esconda
-        textBox3.resignFirstResponder()
-        
-        return true
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        let defaults = UserDefaults.standard
+        defaults.set(self.view.backgroundColor, forKey: "Color")
     }
-
-// 2. Isso faz com que o teclado seja escondido quando vc toca fora dele
-class TouchesViewController: UIViewController {
-    
-    // Sobreescrevemos o metodo touchesBegan(_: with:) que é chamado quando tocamos na tela. Isso faz com que você possa para a edição
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        // Chamamos a view para forçar que a edição pare
-        self.view.endEditing(true)
-    }
-}
-
 }
