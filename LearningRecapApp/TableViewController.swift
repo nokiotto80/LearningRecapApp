@@ -9,6 +9,7 @@ import UIKit
 
 class TableViewController: UITableViewController {
 
+    
     var studentMasterClass: [String] = ["VINCENZO PUGLIESE",  //Array of strings
                                         "GIANLUIGI MARRA",   //IT'S EASIER than dictionary
                                         "STEFANO POMA",
@@ -33,7 +34,8 @@ class TableViewController: UITableViewController {
                                         "GIOVANNI MONACO"]
   
     @IBOutlet weak var imageViewTable: UIImageView!
- 
+    @IBOutlet var myTableView: UITableView!
+  
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -61,8 +63,7 @@ class TableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return studentMasterClass.count
     }
-
-    
+ 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "collegue", for: indexPath)
 
@@ -71,9 +72,33 @@ class TableViewController: UITableViewController {
 
         return cell
     }
- 
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let cell = sender as! TableViewCell
+        if segue.identifier == "Table_Image" {
+            let destination = segue.destination as! Table_Image
+//            print(cell.imageViewCell.image!)
+            
+            destination.nomeCognome = cell.lblNomeCognome.text!
+    
+        }
+    }
+   
+   
+   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "Table_Image", sender: tableView.cellForRow(at: indexPath))
+    }
 
-    /*
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let cell = sender as! UITableViewCell
+//        if segue.identifier == "Table_Image" {
+//                      destination.lblNome = String(myTableView.cellForRow(at: <#T##IndexPath#>))
+////            //                 destination.imageViewCell.image = #imageLiteral(resourceName: "collaboration")
+//        }
+//    }
+    
+    
+ /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.

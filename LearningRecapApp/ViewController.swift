@@ -107,6 +107,10 @@ class ViewController: UIViewController {
         self.txtVocali.becomeFirstResponder()
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     //STepper action
     @IBAction func stepper(_ sender: UIStepper) {
         lblSlider.text = String(stepper.value)
@@ -120,7 +124,10 @@ class ViewController: UIViewController {
         var textToCount : String
         var _ : Int
 
-        textToCount = txtVocali.text!
+        // trim blank spaces
+        textToCount =    txtVocali.text!.trimmingCharacters(in: .whitespaces)
+        
+        
 
         //inizialIZZIAMO i contatori e li azzeriamo ogni volta premo bottone
         contatoreVocali = 0
@@ -153,8 +160,8 @@ class ViewController: UIViewController {
 }
     override func viewDidLoad() {
         super.viewDidLoad()
-        let defaults = UserDefaults.standard
-        self.view.backgroundColor = defaults.object(forKey: "Color") as? UIColor
+//        let defaults = UserDefaults.standard
+//        self.view.backgroundColor = defaults.object(forKey: "Color") as? UIColor
         // Do any additional setup after loading the view, typically from a nib.
         btnSwap.layer.borderWidth = 2
         btnSwap.layer.borderColor = UIColor.black.cgColor
@@ -174,8 +181,5 @@ class ViewController: UIViewController {
         self.textBox3.resignFirstResponder()
     }
     override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        let defaults = UserDefaults.standard
-        defaults.set(self.view.backgroundColor, forKey: "Color")
     }
 }

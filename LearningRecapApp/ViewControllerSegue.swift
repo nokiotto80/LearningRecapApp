@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController2: UIViewController {
+class ViewControllerSegue: UIViewController {
 
     // OUTlets
     @IBOutlet weak var lblSegue: UILabel!    
@@ -17,6 +17,7 @@ class ViewController2: UIViewController {
     
     @IBOutlet weak var lblLazy: UILabel!
     
+    @IBOutlet weak var imageViewTable: UIImageView!
     
     //Action btnSegue
     @IBAction func btnSegue(_ sender: UIButton) {
@@ -34,9 +35,7 @@ class ViewController2: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
+   /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

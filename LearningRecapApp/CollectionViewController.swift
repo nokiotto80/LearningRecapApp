@@ -13,6 +13,8 @@ var vettoreImmagini: [UIImage] = [#imageLiteral(resourceName: "HiedaAdriana"),#i
 class CollectionViewController: UICollectionViewController {
 
     @IBOutlet weak var imageView: UIImageView!
+    
+    @IBOutlet var myCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -58,6 +60,17 @@ class CollectionViewController: UICollectionViewController {
         return cell
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let cell = sender as! CollectionViewCell
+        if segue.identifier == "Cell_Image" {
+            let destination = segue.destination as! Cell_Image
+             print(cell.imageViewCell.image!)
+          
+            destination.immagine = cell.imageViewCell.image
+
+
+        }
+    }
     // MARK: UICollectionViewDelegate
 
     /*

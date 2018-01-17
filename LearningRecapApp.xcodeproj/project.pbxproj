@@ -9,9 +9,10 @@
 /* Begin PBXBuildFile section */
 		71472A9B2008F38200A23091 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71472A9A2008F38200A23091 /* TableViewController.swift */; };
 		71472A9D2008F94A00A23091 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71472A9C2008F94A00A23091 /* CollectionViewController.swift */; };
-		714FC5302007BE0500DB8E30 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714FC52F2007BE0500DB8E30 /* ViewController2.swift */; };
+		714FC5302007BE0500DB8E30 /* ViewControllerSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714FC52F2007BE0500DB8E30 /* ViewControllerSegue.swift */; };
 		71679A0B200CF3BF00125B5B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71679A0A200CF3BF00125B5B /* MapViewController.swift */; };
 		71679A0D200CF92F00125B5B /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71679A0C200CF92F00125B5B /* LoadingView.swift */; };
+		71679A0F200DF95700125B5B /* Cell_Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71679A0E200DF95700125B5B /* Cell_Image.swift */; };
 		719A0769200911D20064E4E4 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719A0768200911D20064E4E4 /* CollectionViewCell.swift */; };
 		71AC27C320077BFA00885EB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AC27C220077BFA00885EB1 /* AppDelegate.swift */; };
 		71AC27C520077BFA00885EB1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AC27C420077BFA00885EB1 /* ViewController.swift */; };
@@ -20,6 +21,8 @@
 		71AC27CD20077BFA00885EB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71AC27CB20077BFA00885EB1 /* LaunchScreen.storyboard */; };
 		71AC27D820077BFA00885EB1 /* LearningRecapAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AC27D720077BFA00885EB1 /* LearningRecapAppTests.swift */; };
 		71AC27E320077BFA00885EB1 /* LearningRecapAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71AC27E220077BFA00885EB1 /* LearningRecapAppUITests.swift */; };
+		71C0EFEE200F5C5B00848197 /* Table_Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C0EFED200F5C5B00848197 /* Table_Image.swift */; };
+		71C0EFF5200F7A7D00848197 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C0EFF4200F7A7D00848197 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,9 +45,10 @@
 /* Begin PBXFileReference section */
 		71472A9A2008F38200A23091 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		71472A9C2008F94A00A23091 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
-		714FC52F2007BE0500DB8E30 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		714FC52F2007BE0500DB8E30 /* ViewControllerSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerSegue.swift; sourceTree = "<group>"; };
 		71679A0A200CF3BF00125B5B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = ../MapViewController.swift; sourceTree = "<group>"; };
 		71679A0C200CF92F00125B5B /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		71679A0E200DF95700125B5B /* Cell_Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell_Image.swift; sourceTree = "<group>"; };
 		719A0768200911D20064E4E4 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		71AC27BF20077BFA00885EB1 /* LearningRecapApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningRecapApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71AC27C220077BFA00885EB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +63,8 @@
 		71AC27DE20077BFA00885EB1 /* LearningRecapAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearningRecapAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		71AC27E220077BFA00885EB1 /* LearningRecapAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningRecapAppUITests.swift; sourceTree = "<group>"; };
 		71AC27E420077BFA00885EB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71C0EFED200F5C5B00848197 /* Table_Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table_Image.swift; sourceTree = "<group>"; };
+		71C0EFF4200F7A7D00848197 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,11 +119,14 @@
 				71679A0A200CF3BF00125B5B /* MapViewController.swift */,
 				71AC27C420077BFA00885EB1 /* ViewController.swift */,
 				71472A9A2008F38200A23091 /* TableViewController.swift */,
+				71C0EFF4200F7A7D00848197 /* TableViewCell.swift */,
+				71C0EFED200F5C5B00848197 /* Table_Image.swift */,
 				71AC27C620077BFA00885EB1 /* Main.storyboard */,
+				71679A0E200DF95700125B5B /* Cell_Image.swift */,
 				71679A0C200CF92F00125B5B /* LoadingView.swift */,
 				719A0768200911D20064E4E4 /* CollectionViewCell.swift */,
 				71472A9C2008F94A00A23091 /* CollectionViewController.swift */,
-				714FC52F2007BE0500DB8E30 /* ViewController2.swift */,
+				714FC52F2007BE0500DB8E30 /* ViewControllerSegue.swift */,
 				71AC27C920077BFA00885EB1 /* Assets.xcassets */,
 				71AC27CB20077BFA00885EB1 /* LaunchScreen.storyboard */,
 				71AC27CE20077BFA00885EB1 /* Info.plist */,
@@ -279,8 +288,11 @@
 			files = (
 				71AC27C520077BFA00885EB1 /* ViewController.swift in Sources */,
 				71AC27C320077BFA00885EB1 /* AppDelegate.swift in Sources */,
+				71679A0F200DF95700125B5B /* Cell_Image.swift in Sources */,
 				719A0769200911D20064E4E4 /* CollectionViewCell.swift in Sources */,
-				714FC5302007BE0500DB8E30 /* ViewController2.swift in Sources */,
+				71C0EFEE200F5C5B00848197 /* Table_Image.swift in Sources */,
+				714FC5302007BE0500DB8E30 /* ViewControllerSegue.swift in Sources */,
+				71C0EFF5200F7A7D00848197 /* TableViewCell.swift in Sources */,
 				71472A9B2008F38200A23091 /* TableViewController.swift in Sources */,
 				71679A0D200CF92F00125B5B /* LoadingView.swift in Sources */,
 				71472A9D2008F94A00A23091 /* CollectionViewController.swift in Sources */,
