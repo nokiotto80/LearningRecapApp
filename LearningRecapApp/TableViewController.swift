@@ -1,5 +1,4 @@
-//
-//  TableViewController.swift
+////  TableViewController.swift
 //  LearningRecapApp
 //
 //  Created by Vincenzo Pugliese on 12/01/2018.
@@ -8,7 +7,6 @@
 import UIKit
 
 class TableViewController: UITableViewController {
-
     
     var studentMasterClass: [String] = ["VINCENZO PUGLIESE",  //Array of strings
                                         "GIANLUIGI MARRA",   //IT'S EASIER than dictionary
@@ -32,6 +30,12 @@ class TableViewController: UITableViewController {
                                         "HIEDA ADRIANA",
                                         "MARCELO SOTOMAYOR",
                                         "GIOVANNI MONACO"]
+    
+//    TRY to declare and read the MP3 files audio
+    let sound1 = NSDataAsset(name: "Robin Schulz - Headlights [feat. Ilsey] [official video]")
+    
+    let sound2 = NSDataAsset(name: "The Soundlovers - Surrender (DANCE 90)")
+    let sound3 = NSDataAsset(name: "Thegiornalisti - Riccione")
   
     @IBOutlet weak var imageViewTable: UIImageView!
     @IBOutlet var myTableView: UITableView!
@@ -69,7 +73,6 @@ class TableViewController: UITableViewController {
 
         // Configure the cell...
         cell.textLabel?.text = "🎓 "+studentMasterClass[indexPath.row]
-
         return cell
     }
     
@@ -80,11 +83,11 @@ class TableViewController: UITableViewController {
 //            print(cell.imageViewCell.image!)
             
             destination.nomeCognome = cell.lblNomeCognome.text!
-    
+
         }
     }
-   
-   
+    
+//   Cell click event
    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "Table_Image", sender: tableView.cellForRow(at: indexPath))
     }

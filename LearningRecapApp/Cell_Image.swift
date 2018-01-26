@@ -12,8 +12,14 @@ class Cell_Image: UIViewController {
 
     @IBOutlet weak var imageViewCell: UIImageView!
     
+    @IBOutlet weak var btnBack: UIButton!
     var immagine: UIImage!  //passata dalla View CollectionViewController
-  
+
+    
+    //button Action,torna indietro
+    @IBAction func btnBack(_ sender: UIButton) {
+        performSegue(withIdentifier: "backTabBar", sender: btnBack)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
